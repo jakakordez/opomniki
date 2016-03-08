@@ -60,6 +60,7 @@ telo {
   display: flex;
   align-items: center;
   justify-content: center;
+  background:rgba(204, 204, 204, 0.15);
 }
 
 #uporabniskiObrazec {
