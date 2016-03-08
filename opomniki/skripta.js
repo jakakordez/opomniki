@@ -9,6 +9,19 @@ window.addEventListener('load', function() {
 		p.innerHTML = txtUser.value;
 		pokrivalo.style.display = "none";
 	};
+	var opomniki = document.getElementById("opomniki");
+	var btnDodajOpomnik = document.getElementById("dodajGumb");
+	btnDodajOpomnik.onclick = function(){
+		var txtNazivOpomnika = document.getElementById("naziv_opomnika");
+		var txtTrajanjeOpomnika = document.getElementById("cas_opomnika");
+		var naziv = txtNazivOpomnika.value;
+		var trajanje = txtTrajanjeOpomnika.value;
+		txtNazivOpomnika.value = "";
+		txtTrajanjeOpomnika.value = "";
+		
+		opomniki.innerHTML = opomniki.innerHTML+"<div class='opomnik'><div class='naziv_opomnika'>"+naziv+"</div><div class='cas_opomnika'> Opomnik čez <span>"+trajanje+"</span> sekund.</div></div>";
+		
+	};
 		
 	//Posodobi opomnike
 	var posodobiOpomnike = function() {
